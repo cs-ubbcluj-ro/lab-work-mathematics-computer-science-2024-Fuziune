@@ -1,0 +1,33 @@
+<program> ::= "int" "main" "(" ")" "{" <stmt_list> "return" <expression> ";" "}"
+
+<stmt_list> ::= <stmt> | <stmt> <stmt_list>
+
+<stmt> ::= <assign_stmt> | <iostmt> | <ifstmt> | <whilestmt> | <struct_stmt>
+
+<assign_stmt> ::= <identifier> "=" <expression> ";"
+
+<iostmt> ::= "cin" ">>" <identifier> ";" | "cout" "<<" <expression> ";"
+
+<ifstmt> ::= "if" "(" <condition> ")" "{" <stmt_list> "}" [ "else" "{" <stmt_list> "}" ]
+
+<whilestmt> ::= "while" "(" <condition> ")" "{" <stmt_list> "}"
+
+<struct_stmt> ::= "struct" <identifier> "{" <decl_list> "}" ";"
+
+<decl_list> ::= <decl> | <decl> <decl_list>
+
+<decl> ::= "int" <identifier> ";" | "bool" <identifier> ";"
+
+<expression> ::= <term> { "+" <term> | "-" <term> }
+
+<term> ::= <factor> { "*" <factor> | "/" <factor> }
+
+<factor> ::= "(" <expression> ")" | <identifier> | <constant>
+
+<condition> ::= <expression> <relop> <expression>
+
+<relop> ::= "==" | "!=" | "<" | "<=" | ">" | ">="
+
+<identifier> ::= <letter> { <letter> | <digit> }
+
+<constant> ::= <digit> { <digit> } | "true" | "false"
