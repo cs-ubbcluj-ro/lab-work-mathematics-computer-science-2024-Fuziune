@@ -24,9 +24,9 @@
 
 <factor> ::= "(" <expression> ")" | <identifier> | <constant>
 
-<condition> ::= <expression> <relop> <expression>
+<condition> ::= <expression> <relation> <expression>
 
-<relop> ::= "==" | "!=" | "<" | "<=" | ">" | ">="
+<relation> ::= "==" | "!=" | "<" | "<=" | ">" | ">="
 
 <identifier> ::= <letter> { <letter> | <digit> }
 
