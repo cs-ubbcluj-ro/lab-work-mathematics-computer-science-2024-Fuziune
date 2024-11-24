@@ -1,0 +1,16 @@
+Symbol Table Entry: Point -> 0
+Symbol Table Entry: x -> 1
+Symbol Table Entry: y -> 2
+Symbol Table Entry: k -> 3
+Symbol Table Entry: count -> 4
+Symbol Table Entry: num -> 5
+Symbol Table Entry: Enter -> 6
+Symbol Table Entry: number -> 7
+Symbol Table Entry: of -> 8
+Symbol Table Entry: primes -> 9
+Symbol Table Entry: p -> 10
+Symbol Table Entry: isPrime -> 11
+Symbol Table Entry: true -> 12
+Symbol Table Entry: i -> 13
+Symbol Table Entry: false -> 14
+Symbol Table Entry: break -> 15
