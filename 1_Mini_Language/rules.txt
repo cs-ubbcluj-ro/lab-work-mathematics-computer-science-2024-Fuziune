@@ -1,0 +1,54 @@
+Minilanguage Specification
+1. Language Elements:
+    Data Types:
+
+        Simple Data Types:
+            int: for integers (e.g., 42, -15).
+            bool: for boolean values (true, false).
+        User-Defined Type:
+            struct: for grouping multiple variables under a custom type.
+            Example: struct Point { int x; int y; };
+    Reserved Words:
+        int, bool, true, false, struct, if, else, while, cin, cout, return.
+
+    Operators:
+        + - * / = == != < <= > >= && || !.
+
+    Separators:
+        { } ( ) ; ,.
+
+    Identifiers:
+
+        Must start with a letter, followed by any combination of letters and digits.
+        Rule: identifier ::= letter { letter | digit }
+        Example: myVar, x1, counter.
+    Constants:
+
+        Integer Constants: Sequence of digits, optionally preceded by + or -.
+        Boolean Constants: true, false.
+    Rules:
+        Integer: constant ::= [ "+" | "-" ] digit { digit }.
+        Boolean: constant ::= "true" | "false".
+Statements:
+    Assignment:
+        variable = expression;
+        Example: x = 5;.
+
+    Input/Output:
+
+        Input: cin >> variable;
+        Output: cout << expression; Example: cin >> x; cout << x;.
+    Conditional:
+
+        if (condition) { statements } [ else { statements } ] Example:
+             if (x > 10) {
+                 cout << "x is large";
+             } else {
+                 cout << "x is small";
+             }
+    Loop:
+
+        while (condition) { statements } Example:
+            while (x < 5) {
+                x = x + 1;
+            }
