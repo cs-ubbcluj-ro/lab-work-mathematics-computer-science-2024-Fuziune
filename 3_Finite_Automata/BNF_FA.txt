@@ -1,0 +1,20 @@
+<fa> ::= <states> <alphabet> <transitions> <final_states>
+
+<states> ::= "States:" <state_list>
+<state_list> ::= <state> | <state> "," <state_list>
+<state> ::= <identifier>
+
+<alphabet> ::= "Alphabet:" <symbol_list>
+<symbol_list> ::= <symbol> | <symbol> "," <symbol_list>
+<symbol> ::= <letter> | <digit>
+
+<transitions> ::= "Transitions:" <transition_list>
+<transition_list> ::= <transition> | <transition> "," <transition_list>
+<transition> ::= <state> "->" <symbol> "->" <state>
+
+<final_states> ::= "Final States:" <final_state_list>
+<final_state_list> ::= <state> | <state> "," <final_state_list>
+
+<identifier> ::= <letter> { <letter> | <digit> }
+<letter> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | "C" | ... | "Z"
+<digit> ::= "0" | "1" | "2" | ... | "9"
