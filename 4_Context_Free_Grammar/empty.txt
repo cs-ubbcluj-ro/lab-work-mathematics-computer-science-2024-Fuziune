@@ -1,0 +1,63 @@
+<program> ::= "int" "main" "(" ")" "{" <stmt_list> "return" <expression> ";" "}"
+
+<stmt_list> ::= <stmt>
+              | <stmt> <stmt_list>
+
+<stmt> ::= <assign_stmt>
+         | <iostmt>
+         | <ifstmt>
+         | <whilestmt>
+         | <struct_stmt>
+
+<assign_stmt> ::= <identifier> "=" <expression> ";"
+
+<iostmt> ::= "cin" ">>" <identifier> ";"
+           | "cout" "<<" <expression> ";"
+
+<ifstmt> ::= "if" "(" <condition> ")" "{" <stmt_list> "}"
+           | "if" "(" <condition> ")" "{" <stmt_list> "}" "else" "{" <stmt_list> "}"
+
+<whilestmt> ::= "while" "(" <condition> ")" "{" <stmt_list> "}"
+
+<struct_stmt> ::= "struct" <identifier> "{" <decl_list> "}" ";"
+
+<decl_list> ::= <decl>
+              | <decl> <decl_list>
+
+<decl> ::= "int" <identifier> ";"
+         | "bool" <identifier> ";"
+
+<expression> ::= <term>
+               | <expression> "+" <term>
+               | <expression> "-" <term>
+
+<term> ::= <factor>
+         | <term> "*" <factor>
+         | <term> "/" <factor>
+
+<factor> ::= "(" <expression> ")"
+           | <identifier>
+           | <constant>
+
+<condition> ::= <expression> <relation> <expression>
+
+<relation> ::= "=="
+             | "!="
+             | "<"
+             | "<="
+             | ">"
+             | ">="
+
+<identifier> ::= <letter> 
+               | <identifier> <letter_or_digit>
+
+<letter_or_digit> ::= <letter> | <digit>
+
+<constant> ::= <digit>
+             | <constant> <digit>
+             | "true"
+             | "false"
+
+<letter> ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z" | "_"
+
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
